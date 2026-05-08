@@ -1,2 +1,6 @@
 # ignore compiled binaries
 bin
+
+# pixi environments
+.pixi/*
+!.pixi/config.toml
