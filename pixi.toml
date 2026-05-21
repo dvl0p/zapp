@@ -6,8 +6,9 @@ platforms = ["linux-64"]
 version = "0.1.0"
 
 [tasks]
-build = "go build -o ./bin/ ./cmd/zapp"
-exec = { cmd = "./bin/zapp", depends-on = ["build"] }
+build = "go build -o $PIXI_PROJECT_ROOT/bin/ $PIXI_PROJECT_ROOT/cmd/zapp"
+zapp = { cmd = "$PIXI_PROJECT_ROOT/bin/zapp", depends-on = ["build"] }
 
 [dependencies]
 go = ">=1.26.2,<2"
+gcc_linux-64 = ">=14.3.0,<15"
